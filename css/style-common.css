@@ -43,7 +43,7 @@
 .btn{display: inline-flex; box-sizing: border-box; transition: all 0.2s ease; align-items: center; justify-content: center; font-size: 1.6rem;}
 .btn img{margin-left: 0.5rem; margin-top: 0.2rem;}
 .btn:focus{box-shadow: none;}
-.btn-s{ height: 4rem; min-width: 13.5rem; border-radius: .6rem; font-weight: 300; padding: 0 1.6rem; font-size: 1.4rem;}
+.btn-s{ height: 4rem; min-width: 8rem; border-radius: .6rem; font-weight: 300; padding: 0 1.6rem; font-size: 1.4rem;}
 .btn-xs{ height: 2.4rem; min-width: 8rem; min-width: 6.2rem; font-size: 1.2rem; font-weight: 300; border-radius: .2rem;}
 .btn-m{height:4.8rem; min-width: 8rem; font-weight: 400; padding-left: 1.5rem; padding-right: 1.5rem; line-height: 100%;}
 .btn-m i{margin-left: 2.4rem;}
@@ -235,7 +235,7 @@ caption, legend {position: absolute; margin: -1px; padding: 0; width: 1px; heigh
 
 
 .bbs_ListA table {table-layout:fixed;  color:#444; text-align:center; border-top:2px solid #000; } /* color */
-.bbs_ListA table thead th {position:relative; padding:1.6rem 0.5rem; color:#222; font-weight:400; background:#FAFAFA; border-bottom:1px solid #ddd; font-weight:600; height: 5.8rem;  }
+.bbs_ListA table thead th {position:relative; padding:1.6rem 0.5rem; color:#222; font-weight:400; background:#F2F6FB; border-bottom:1px solid #ddd; font-weight:600; height: 5.8rem;  }
 .bbs_ListA table thead th:before{content:""; position:absolute; left:0; top:30%; width:1px; height:40%; background:#ddd;}
 .bbs_ListA table thead th:first-child:before{display:none;}
 .bbs_ListA table tbody th {padding:1.5rem 0.5rem; border-bottom:1px solid #ddd; color: #666; background: #FAFAFA;}
@@ -328,8 +328,8 @@ table.table-default tbody tr td:last-of-type{border-right: none;}
 	.bbs_ListA table tbody td.mobNone {display:none; }
 	.bbs_ListA table tbody td:first-child,
 	.bbs_ListA table tbody td:last-child,
-	.bbs_ListA table tbody td.bbs_tit {background:none; }
-	.bbs_ListA table tbody td.bbs_tit {position:relative; width:100%; padding:0 0.5rem 0.25rem; float:none; text-align:left !important; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+	.bbs_ListA table tbody td.bbs_tit {background:none;  }
+	.bbs_ListA table tbody td.bbs_tit {position:relative; font-weight: 700; width:100%; padding:0 0.5rem 0.25rem; float:none; text-align:left !important; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
 	.bbs_ListA table tbody td.bbs_tit a {color:#222; }
 	.bbs_ListA table tbody td.bbs_tit a img {width: 1.6rem;}
     .mob-show-td{display: inline-flex;}

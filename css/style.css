@@ -605,7 +605,7 @@ footer{background-color: #2A2C31; color: #fff;}
 /* 정책자금 온라인신청 */
 .online-step{background-color:#F6F5F5; padding:4rem 0; overflow: hidden;}
 .step-block .swiper-slide{width: auto; position: relative;}
-.step-block .swiper-slide:after{content: ""; display: block; background: url(../img/img-arrow-step.svg) no-repeat; width: 1.9rem; height: 3.4rem; top: 3.5rem; position: absolute; right: -5rem;}
+.step-block .swiper-slide:after{content: ""; display: block; background: url(../img/img-arrow-step.svg) no-repeat; width: 1.9rem; height: 3.4rem; top: 3.5rem; position: absolute; right: -5rem; background-size: 100% auto;}
 .step-block .swiper-slide:last-of-type::after{display: none;}
 .step-block .swiper-slide a{display: flex; flex-direction: column; align-items:center; justify-content: center; width: 15.5rem;}
 .step-block .swiper-slide a .step{display: flex; width: 10rem; height: 10rem; border-radius: 50%; border: 1px solid #ddd; background-color: #fff;}
