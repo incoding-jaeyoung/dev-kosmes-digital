@@ -106,7 +106,7 @@ a:hover{color:#003994;}
 
 .modal-dialog.modal-s{width: 50rem;}
 .modal-dialog.modal-s .modal-content{border-radius: 0;}
-.modal-dialog.modal-s .modal-header{border-radius: 0; height: auto; min-height: 5.6rem; padding: 1.6rem 8rem; text-align: center;}
+.modal-dialog.modal-s .modal-header{border-radius: 0; height: auto; min-height: 5.6rem; padding: 1.6rem 2.4rem; text-align: center;}
 .modal-dialog.modal-s .modal-body{border-radius: 0; padding: 4rem 0 4rem 3rem}
 .modal-dialog.modal-s .modal-scroll-con{padding-right: 3rem;}
 
@@ -154,8 +154,8 @@ a:hover{color:#003994;}
 }
 
 
-::-webkit-scrollbar {width: 0.8rem; }
-::-webkit-scrollbar-thumb {background: #003994;border-radius: 10px; }
+::-webkit-scrollbar {width: 0.8rem; height: 0.2rem; }
+::-webkit-scrollbar-thumb {background: #003994; border-radius: 10px; }
 ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2);}
 
 /* layout */
@@ -603,7 +603,7 @@ footer{background-color: #2A2C31; color: #fff;}
 }
 
 /* 정책자금 온라인신청 */
-.online-step{background-color:#F6F5F5; padding:4rem 0;}
+.online-step{background-color:#F6F5F5; padding:4rem 0; overflow: hidden;}
 .step-block .swiper-slide{width: auto; position: relative;}
 .step-block .swiper-slide:after{content: ""; display: block; background: url(../img/img-arrow-step.svg) no-repeat; width: 1.9rem; height: 3.4rem; top: 3.5rem; position: absolute; right: -5rem;}
 .step-block .swiper-slide:last-of-type::after{display: none;}
@@ -633,6 +633,9 @@ footer{background-color: #2A2C31; color: #fff;}
 .fail-block{display: flex; border: 1px solid #ddd; padding: 4rem;}
 .fail-block .ico{margin-right: 4.5rem;}
 .fail-block dl dd{line-height: 2.4rem; margin-top: 1rem; font-size: 1.4rem;}
+.id-card{padding: 2.5rem 5rem; display: flex; justify-content: space-between;}
+.qr-msg{display: flex; align-items: center;}
+.qr-msg p img{width: 12rem; margin-right: 2rem;}
 @media (max-width: 600px) {
     .online-step{padding:3rem 0;}
     .step-block .swiper-slide:after{right: -3.5rem;}
@@ -646,6 +649,10 @@ footer{background-color: #2A2C31; color: #fff;}
     .fail-block .ico{display: none;}
     .fail-block dl dt{}
     .fail-block dl dd{line-height: 2.4rem; margin-top: 1rem;}
+    .id-card {padding: 0rem;}
+    .id-card img{width: 100%; height: auto !important;}
+    .id-card img:last-of-type{display: none;}
+    .qr-msg p img{width: 8rem; margin-right: 1.5rem;}
 }
 
 
