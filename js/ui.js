@@ -4,7 +4,9 @@ if ('scrollRestoration' in history) {
 }
 gsap.registerPlugin(ScrollTrigger);
 // JavaScript Document
+
 $(document).ready(function () {
+    
     $('#top-aside').load("inc/top-aside.html");
     $('#header').load("inc/header.html");
     $('.nav-area').load("inc/nav-area.html");
@@ -14,14 +16,31 @@ $(document).ready(function () {
     $('.page-aside').load("inc/page-aside.html");
 });
 window.onload = function () {
-    $('body').imagesLoaded().done(function (instance) {
+    // $('body').imagesLoaded().done(function (instance) {
         console.log('image loaded!!')
         commonTween()
         init();
         // headerScroll();
         navTrigger()
-    });
+    // });
 }
+// 데이트피커
+$(document).ready(function () {
+    $("body").append('<script src="../js/jquery-ui/jquery-ui.min.js"></script>');
+    $.datepicker.setDefaults({
+        dateFormat: 'yy-mm-dd',
+        prevText: '이전 달',
+        nextText: '다음 달',
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        showMonthAfterYear: true,
+        yearSuffix: '년'
+    });
+    $('.datepicker').datepicker();
+})
 function init() {
     setTimeout(function(){
         $('#header').addClass('load')

@@ -107,9 +107,7 @@ hr{height: 1px; background-color: #ddd; display: block; border: none;}
 .type span{display: flex; align-items: center; min-width: 16rem; height: 3.2rem; border-radius: 4rem; background: #7E7E7E; color: #fff; justify-content: center; margin-right: 2rem; flex: none; font-size: 1.4rem; font-weight: 400; padding: 0 1.5rem;}
 .type span.fail{background-color:#EF7300;}
 .scroll{overflow-y: auto;}
-.datepicker .picker-con{position: relative; width: auto; display: inline-flex;}
-.datepicker .picker-con input[type=text]:disabled{background-color: #fff;}
-.datepicker button{position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);}
+.center-left{align-items: center;}
 @media (max-width: 600px) {
     .flex-bet-m-colum{flex-direction: column; justify-content: flex-start; align-items: flex-start;}
     .flex-m-colum{flex-direction: column;}
@@ -126,6 +124,7 @@ hr{height: 1px; background-color: #ddd; display: block; border: none;}
     .caution-line img{margin-right: 0.5rem; align-self: flex-start; margin-top: 0.5rem;}
     .type{display: flex; align-items:flex-start; flex-direction: column;}
     .type span{margin-bottom: 1rem;}
+    .center-left{align-items:flex-start;}
 }
 
 /* tab-ui-con */
@@ -297,16 +296,16 @@ table.table-default tbody tr td:last-of-type{border-right: none;}
     .table-block{border-top: 2px solid #000; display: flex; flex-direction: column;}
     .table-block dl{display: flex; border-bottom:0; flex-direction: column; width: 100% !important;}
     .table-block dl.no-bg{min-height:0;}
-    .table-block dl.no-bg dt{background: none; border: none; padding-left: 0.5rem; flex-wrap: wrap; width: 100%; padding-right: 0.5rem;}
-    .table-block dl.no-bg dd{justify-content: flex-start; width: 100% !important; flex-direction: row; flex-wrap: wrap;}
-    .table-block dl dt{display: flex; font-size: 1.4rem; flex: none; width:100% !important; border:none; padding: 1rem 0 1rem 0; margin: 1rem 0; padding-left: 0.5rem;}
+    .table-block dl.no-bg dt{background-color: #F2F6FB; border: none; padding-left: 0.5rem; flex-wrap: wrap; width: 100%; padding-right: 0.5rem;}
+    .table-block dl.no-bg dd{justify-content: flex-start; width: 100% !important; flex-direction: row; flex-wrap: wrap; padding-top: 0.8rem; padding-bottom: 0;}
+    .table-block dl dt{display: flex; font-size: 1.4rem; flex: none; width:100% !important; border:none; padding: 0.8rem 0; margin: 0.8rem 0 0 0 ; padding-left: 0.5rem;}
     .table-block dl dt br{display: none;}
-    .table-block dl.gray-bg{background:none; border-bottom: 1px solid #ddd;}
-    .table-block dl.gray-bg dt{background: none; border: none; padding-left: 0.5rem; flex-wrap: wrap; width: 100%; padding-right: 0.5rem; padding: 0;}
-    .table-block dl.gray-bg dd{justify-content:flex-start;  width: 100% !important; flex-direction: row; flex-wrap: wrap; background:none; padding-bottom: 1rem;}
+    .table-block dl.gray-bg{border-bottom: 1px solid #ddd;}
+    .table-block dl.gray-bg dt{background: none; border: none; padding: 0.5rem; flex-wrap: wrap; width: 100%; }
+    .table-block dl.gray-bg dd{justify-content:flex-start;  width: 100% !important; flex-direction: row; flex-wrap: wrap; background:none; padding: 0.8rem;}
     .type span{font-size: 1.2rem; margin-right: 0.5rem; min-width: 0 !important; height: 2.2rem;}
 
-    .table-block dl dd{display: flex; padding:0; flex-direction: column;}
+    .table-block dl dd{display: flex; padding:0; flex-direction: column; padding: 0.8rem 0;}
     .table-block dl dd input[type=text],.table-block dl dd input[type=password]{width:100%;}
     .table-block .form-info{font-size: 1.2rem; margin-top: 0.8rem; color: #666666;}
     .number-form {}

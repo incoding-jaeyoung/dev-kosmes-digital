@@ -3,11 +3,16 @@
 @import url('../fonts/fontawesome/css/all.min.css');
 @import url('../fonts/font.css');
 @import url('swiper-bundle.min.css');
+@import url('../js/jquery-ui/jquery-ui.min.css');
+@import url('../js/jquery-ui/datepicker-theme/datepicker-theme.css');
 
 html,
 body {
   font-size: 62.5%;
 }
+@media all and (max-width: 2000px) {
+    html {font-size:55%;}
+ }
 @media all and (max-width: 1400px) {
     html {font-size:45%;}
  }
@@ -19,6 +24,7 @@ body {
  }
 /* common */
 * { -webkit-overflow-scrolling: touch;  word-break: keep-all; box-sizing: border-box;}
+input[type=text].datepicker{display: inline-flex; position: relative; background:#fff url(../img/calendar.svg) no-repeat right 0.8rem center;}
 input[type=text],input[type=email],input[type=password],textarea, select {-webkit-appearance: none; border: .1rem solid #ddd; background-color: #fff; height: 4.8rem; padding: 0 1rem; font-size: 1.6rem; box-sizing: border-box; font-family:'Noto Sans KR', sans-serif; width: 100%;  vertical-align: middle; color:#333;}
 input[type=text]:disabled,input[type=password]:disabled,select:disabled{background-color: #ECECEC;}
 textarea{width: 100%; padding-top: 1.3rem;  padding-bottom: 1.3rem; height:30rem; font-size: 1.4rem; background: none; border: none; border: 1px solid #ddd;}
@@ -356,6 +362,8 @@ footer{background-color: #2A2C31; color: #fff;}
 
 
 @media (max-width: 600px) {
+    input[type=radio]+label{font-size: 1.4rem;}
+    input[type=checkbox]+label{font-size: 1.4rem;}
     body{font-size: 1.4rem; line-height: 2.4rem;}
     .float{display: none;}
     .digital a{width: 3rem; height: 14rem; color: #fff; background: #E9374E; border-radius: 6px 0px 0px 6px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; writing-mode: vertical-lr; text-orientation: upright; letter-spacing: 0.5rem;}
@@ -494,6 +502,7 @@ footer{background-color: #2A2C31; color: #fff;}
 .view ul{margin-top: 4rem; display: flex; justify-content: space-between;}
 .view ul li{ width: 38rem;}
 .view ul li a{display: flex; box-shadow:0px 3px 8px rgba(0, 0, 0, 0.3); width: 100%; background-color:#477FE1; color: #fff; align-items: center; padding: 3rem; line-height: 2rem;}
+.view ul li a:hover{background: #653DD6;}
 .view ul li a .ico{display: flex;}
 .view ul li a .ico:after{content: ""; display: block; width: 1px; height:8.5rem; background: rgba(255, 255, 255, 0.4); margin: 0 2rem;}
 .view ul li a dl{}
@@ -504,10 +513,14 @@ footer{background-color: #2A2C31; color: #fff;}
 .check-money .summery{text-align: center; font-size: 2rem; color: #666; margin-top: 2rem;}
 .check-money ul{display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 5rem; padding: 0 3rem;}
 .check-money ul li{width: 28rem; height: 19rem; margin-bottom: 3rem;}
-.check-money ul li a{width: 100%; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25); display: flex; height: 100%; padding: 2.3rem 3rem 0 3rem;}
+.check-money ul li a{width: 100%; display: flex; height: 100%; padding: 2.3rem 3rem 0 3rem; position: relative; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);}
+.check-money ul li a:after{position: absolute; width: 28rem; height: 19rem; content: ""; border: 5px solid #477FE1; left: 0; top: 0; box-sizing: border-box; opacity: 0; transition: all 0.4s ease;}
+.check-money ul li a:hover{box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.27); opacity: 1;}
+.check-money ul li a:hover:after{opacity: 1;}
 .check-money ul li a dl{}
 .check-money ul li a dl dt{font-size: 2.6rem; font-weight: 500;}
 .check-money ul li a dl dd{font-size: 1.4rem; line-height: 1.8rem; color: #A5A5A5; margin-top: 0.8rem;}
+.check-money ul li a:hover dl dd{color: rgba(0, 57, 148, 0.7);}
 .check-money ul li:nth-child(1) a{background: url(../img/index/ico-view-01.png) no-repeat right 0.5rem bottom; background-size: 12.5rem auto;}
 .check-money ul li:nth-child(2) a{background: url(../img/index/ico-view-02.png) no-repeat right 0.5rem bottom; background-size: 12.5rem auto;}
 .check-money ul li:nth-child(3) a{background: url(../img/index/ico-view-03.png) no-repeat right 0.5rem bottom; background-size: 12.5rem auto;}
@@ -530,6 +543,7 @@ footer{background-color: #2A2C31; color: #fff;}
 .service-list .row{padding: 0 3rem;}
 .service-list ul{display: flex; justify-content: space-between;}
 .service-list ul li a{display: flex; width: 27.7rem; height: 17.4rem; background: #EAF1FB; align-items: center; justify-content: center; flex-direction: column;}
+.service-list ul li a:hover{transform: translateY(-2rem); box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.27);}
 .service-list ul li a .text{margin-top: 0.8rem; font-weight: 500;}
 
 @media (max-width: 600px) {
@@ -636,6 +650,38 @@ footer{background-color: #2A2C31; color: #fff;}
 .id-card{padding: 2.5rem 5rem; display: flex; justify-content: space-between;}
 .qr-msg{display: flex; align-items: center;}
 .qr-msg p img{width: 12rem; margin-right: 2rem;}
+
+.patent{background-color: #F2F2F2; display: flex; flex-wrap: wrap; align-items: center; margin-top: 0.8rem; padding: 0.6rem 2rem;}
+.patent:first-of-type{margin-top: 0;}
+.patent>div{display: flex; align-items: center; width: 33%; }
+.patent>div span{display: inline-flex; justify-content: flex-end; width:12rem; text-align: right;  margin-right: 1rem; font-size: 1.6rem;}
+
+.callender{margin-top: 12rem;}
+.callender-head{display: flex; align-items: center; justify-content: center; position: relative; height: 4rem;}
+.callender-head .date{font-size: 3.2rem;}
+.callender-head .month-btn button{position:absolute; top: 0;}
+.callender-head .month-btn button:first-of-type{left: 0;}
+.callender-head .month-btn button:last-of-type{right: 0;}
+.callender-con {margin-top: 2rem;}
+.callender-con table{border-top: 2px solid #000;}
+.callender-con table thead tr{display: flex; width: 100%;}
+.callender-con table thead th{padding: 2rem 0; background: #F2F6FB;  font-size: 1.6rem; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; width: 100%;}
+.callender-con table thead th:first-of-type{border-left:0;}
+.callender-con table tbody td{border-bottom: 1px solid #ddd; border-left: 1px solid #ddd;}
+.callender-con table tbody tr td:first-of-type{border-left:0;}
+.callender .block{display: flex; height: 10rem; width: 100%; padding: 1rem; flex-direction: column; cursor: pointer; justify-content: space-between;}
+.callender .block .number{display: flex; width: 3rem; height: 3rem; background: #C3DEFF; border-radius: 50%; align-self: flex-end; align-items: center; justify-content: center;}
+.callender .block.active{color: #fff; background: #003994;}
+.callender .block.active .number{color: #000;}
+.callender-con table tbody tr{display: flex; width: 100%;}
+.callender-con table tbody tr td{width: 100%;}
+.callender-con table tbody td.today  .block{border: 2px solid #003994;}
+.callender-con table tbody td.disabled .block{background: #fafafa; cursor: default;}
+.callender-con table tbody td.disabled .block .number{display: none;}
+.callender-con table tbody td.disabled .block .date{color: #999;}
+.callender-con table tbody tr td:first-of-type .block{ background-color: #F4F1F1 !important;}
+.callender-con table tbody tr td:last-of-type .block{background-color: #F4F1F1 !important;}
+
 @media (max-width: 600px) {
     .online-step{padding:3rem 0;}
     .step-block .swiper-slide:after{right: -3.5rem;}
@@ -653,6 +699,22 @@ footer{background-color: #2A2C31; color: #fff;}
     .id-card img{width: 100%; height: auto !important;}
     .id-card img:last-of-type{display: none;}
     .qr-msg p img{width: 8rem; margin-right: 1.5rem;}
+
+    .patent{background-color: #F2F2F2; display: flex; flex-wrap: wrap; flex-direction: column; align-items: flex-start; margin-top: 0.8rem; padding:1.6rem 0.8rem;}
+    .patent:first-of-type{margin-top: 0;}
+    .patent>div{display: flex; align-items: center; width: 100%;  margin-top: 0.5rem;}
+    .patent>div:first-of-type{margin-top: 0;}
+    .patent>div span{display: inline-flex; justify-content: flex-start; width:7rem; margin-right: 1rem; font-size: 1.4rem; flex: none;}
+
+    .callender{margin-top: 3rem;}
+    .callender-head{display: flex; align-items: center; justify-content: center; position: relative; height:2.4rem;}
+    .callender-head .month-btn button{border: none;}
+    .callender-head .month-btn button img{width: 2.4rem;}
+    .callender-head .date{font-size: 2rem;}
+    .callender-con {margin-top: 1rem;}
+    .callender-con table thead th{padding: 0.5rem 0; font-size: 1.4rem;}
+    .callender .block{height: 6rem; padding: 0.5rem;font-size: 1.4rem;}
+    .callender .block .number{width: 2rem; height: 2rem; font-size: 1.2rem; line-height: 100%;}
 }
 
 
@@ -672,12 +734,14 @@ footer{background-color: #2A2C31; color: #fff;}
 .login-wrap{padding: 8rem 0;}
 .login-wrap h2{font-weight: 700; font-size: 4.8rem; text-align: center;}
 .login-step{margin-top: 4rem; background: #FAFAFA; border: 1px solid #DDDDDD; display: flex;}
-.login-step li{height: 5.6rem; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; width: 100%; position: relative; border-right: 1px solid #ddd;}
-.login-step li:after{content: ""; height: 5.6rem; width: 2rem; background: url(../img/ico-join.svg) no-repeat; display: flex; position: absolute; right:-2rem; top: 0;}
+.login-step li{height: 5.6rem; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; width: 100%; position: relative; }
+.login-step li:after{content: ""; height: 5.8rem; width: 2.2rem; background: url(../img/ico-join.svg) no-repeat; display: flex; position: absolute; right:-2.2rem; top: 0; background-size:auto 100%;}
 .login-step li.active{background-color: #2F436B; color: #fff;}
-.login-step li.active::after{background: url(../img/ico-join-active.svg) no-repeat;}
+.login-step li.active::after{background: url(../img/ico-join-active.svg) no-repeat; width: 2rem; height: 5.6rem; background-size: auto 100%; right: -2rem;}
+.login-step li.active::before{content: ""; height: 5.8rem; width: 2.2rem; background: url(../img/ico-join.svg) no-repeat; display: flex; position: absolute; left:-0.1rem; top: 0; background-size:auto 100%;}
 .login-step li:last-child{border: none;}
 .login-step li:last-child::after{display: none;}
+.login-step li:first-child::before{display: none;}
 .login-step li b{margin-right: 0.4rem;}
 .join-msg{margin-top: 12rem; font-size: 2.4rem; font-weight: 700; color: #000; text-align: center;}
 .join-type{margin-top: 4rem; display: flex; justify-content: center;}
@@ -700,6 +764,7 @@ footer{background-color: #2A2C31; color: #fff;}
     .login-step{margin-top: 2.4rem;}
     .login-step li{height:auto; display: flex; flex-direction: column; align-items:flex-start; justify-content:flex-start ; font-size: 1.2rem; padding:0.8rem; line-height: 1.8rem;}
     .login-step li:after{display: none;}
+    .login-step li.active:before{display: none;}
     .join-msg{margin-top: 6rem; font-size: 2rem;}
     .join-type{margin-top: 1rem; flex-direction: column;}
     .join-type button{width: 100%; display: flex; align-items:center; justify-content:flex-start; margin: 0; flex-direction: row; padding:0 2.5rem; height: 10rem;}
